@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <link href="popupStyle.css" rel="stylesheet">
+        <title>YT Comment Search</title>
+    </head>
+    <body id="body">
+        <script src="https://apis.google.com/js/api.js"></script>
+        <script type="module" src="js/search.js"></script>
+        <script type="module" src="js/preparation.js"></script>
+        <script type="module" src="js/popupControl.js"></script>
+        <script type="module" src="js/quota.js"></script>
+        <script type="module" src="js/apicalls.js"></script>
+        
+        <div id="main" class="main">
+            <div id="searchBlock" class="search-block">
+                <div class="search-textbox-wrapper">
+                    <input id="requestText" class="search-textbox" type="text" placeholder="Search">
+                </div>
+                <button id="searchButton" class="search-button">
+                    <img class="scope-image" src="content/search_icon_white.png">
+                </button>
+            </div>
+            <div id="uiWrapper" class="small-ui-wrapper">
+                <div id="optionBlock" class="option-block">
+                    <div class="option-text-wrap">
+                        <label id="optionText" class="option-text" title="Maximum number of comments for a search. Starting from the latest.">Latest comments for a search: </label>
+                    </div>
+                    <div id="groupRadioCommentsWrap" class="group-radio-comments-wrap">
+                        <div class="radio-comments-wrap">
+                            <input id="radioComments1" type="radio" value="100" name="groupOne" checked="true">
+                            <label for="radioComments1" class="radio-text">100</label>
+                        </div>
+                        <div class="radio-comments-wrap">
+                            <input id="radioComments2" type="radio" value="1000" name="groupOne">
+                            <label for="radioComments2" class="radio-text">1 000</label>
+                        </div>
+                        <div class="radio-comments-wrap">
+                            <input id="radioComments3" type="radio" value="10000" name="groupOne">
+                            <label for="radioComments3" class="radio-text">10 000</label>
+                        </div>
+                        <div class="radio-comments-wrap">
+                            <input id="radioComments4" type="radio" value="100000" name="groupOne">
+                            <label for="radioComments4" class="radio-text">100 000</label>
+                        </div>
+                    </div>
+                </div>
+                <div id="pointBlock" class="point-block">
+                    <div id="pointTextWrapper" class="point-text-wrapper">
+                        <label>Points left:&nbsp</label>
+                        <label id="pointNum">1000</label>
+                    </div>
+                </div>
+            </div>
+            <div id="commentsUiWrapper" class="comments-ui-wrapper">
+                <div class="separator-line"></div>
+                <div id="loadSpinner" class="load-spinner"></div>
+            </div>
+        </div>
+    </body>
+</html>
